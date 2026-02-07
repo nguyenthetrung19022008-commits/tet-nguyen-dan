@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Tết Nguyên Đán</title>
+
+<style>
+body{
+  margin:0;
+  font-family:"Segoe UI", Arial, sans-serif;
+  background:#fff6dc;
+}
+
+/* HEADER */
+header{
+  background:linear-gradient(to right,#b30000,#e60000);
+  color:white;
+  padding:30px;
+  text-align:center;
+}
+header h1{
+  margin:0;
+  font-size:42px;
+  letter-spacing:2px;
+}
+header p{
+  margin-top:10px;
+  font-size:18px;
+}
+
+/* MENU */
+.menu{
+  display:flex;
+  justify-content:center;
+  background:#ffd24d;
+  padding:15px;
+}
+.menu button{
+  background:#b30000;
+  color:white;
+  border:none;
+  margin:0 12px;
+  padding:14px 26px;
+  font-size:18px;
+  border-radius:30px;
+  cursor:pointer;
+  transition:0.3s;
+}
+.menu button:hover{
+  background:#ff3333;
+  transform:scale(1.08);
+}
+
+/* SECTION */
+.section{
+  display:none;
+  max-width:1000px;
+  margin:30px auto;
+  background:white;
+  padding:35px;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+.section.active{
+  display:block;
+}
+.section h2{
+  color:#b30000;
+  text-align:center;
+  font-size:32px;
+}
+.section p{
+  font-size:19px;
+  line-height:1.9;
+  text-align:justify;
+}
+
+/* IMAGES */
+.images{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  margin-top:25px;
+}
+.images img{
+  width:260px;
+  margin:12px;
+  border-radius:14px;
+  cursor:pointer;
+  box-shadow:0 6px 14px rgba(0,0,0,0.25);
+  transition:0.3s;
+}
+.images img:hover{
+  transform:scale(1.05);
+}
+
+/* OVERLAY */
+#overlay{
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.85);
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+}
+#overlay img{
+  max-width:85%;
+  max-height:85%;
+  border-radius:15px;
+  box-shadow:0 0 30px rgba(255,255,255,0.3);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>TẾT NGUYÊN ĐÁN</h1>
+  <p>Nét đẹp truyền thống – Bản sắc văn hóa dân tộc Việt Nam</p>
+</header>
+
+<div class="menu">
+  <button onclick="showSection('gioithieu')">Giới thiệu</button>
+  <button onclick="showSection('phongtuc')">Phong tục</button>
+  <button onclick="showSection('amthuc')">Ẩm thực</button>
+  <button onclick="showSection('ynghia')">Ý nghĩa</button>
+</div>
+
+<!-- GIỚI THIỆU -->
+<div id="gioithieu" class="section active">
+<h2>Giới thiệu về Tết Nguyên Đán</h2>
+<p>
+Tết Nguyên Đán là ngày lễ truyền thống quan trọng và thiêng liêng nhất của dân tộc Việt Nam,
+đánh dấu thời khắc chuyển giao giữa năm cũ và năm mới theo âm lịch. Đây không chỉ là dịp nghỉ lễ
+mà còn mang giá trị tinh thần sâu sắc, gắn liền với gia đình, quê hương và cội nguồn dân tộc.
+</p>
+<p>
+Trong những ngày Tết, mọi người dù đi xa đến đâu cũng cố gắng trở về sum họp, cùng nhau dọn dẹp nhà cửa,
+chuẩn bị mâm cỗ, trang hoàng không gian sống và gửi đến nhau những lời chúc tốt đẹp cho năm mới.
+</p>
+<div class="images">
+  <img src="images\tet1.jpg" onclick="openImg(this.src)">
+  <img src="images\tet2.jpg" onclick="openImg(this.src)">
+  <img src="images\tet3.jpg" onclick="openImg(this.src)">
+</div>
+</div>
+
+<!-- PHONG TỤC -->
+<div id="phongtuc" class="section">
+<h2>Phong tục ngày Tết</h2>
+<p>
+Phong tục Tết Nguyên Đán thể hiện rõ nét truyền thống “uống nước nhớ nguồn” của dân tộc Việt Nam.
+Trước Tết, các gia đình thường dọn dẹp nhà cửa, trang trí bàn thờ tổ tiên và chuẩn bị mâm cỗ cúng.
+</p>
+<p>
+Các phong tục quen thuộc như gói bánh chưng, chúc Tết, lì xì đầu năm, xông đất hay đi lễ chùa
+đều mang ý nghĩa cầu mong may mắn, bình an và tài lộc cho năm mới.
+</p>
+<div class="images">
+  <img src="images\phongtuc1.jpg" onclick="openImg(this.src)">
+  <img src="images\phongtuc2.jpg" onclick="openImg(this.src)">
+  <img src="images\phongtuc3.jpg" onclick="openImg(this.src)">
+  <img src="images\phongtuc4.jpg" onclick="openImg(this.src)">
+</div>
+</div>
+
+<!-- ẨM THỰC -->
+<div id="amthuc" class="section">
+<h2>Ẩm thực ngày Tết</h2>
+<p>
+Ẩm thực ngày Tết vô cùng phong phú và mang đậm bản sắc văn hóa vùng miền.
+Mỗi món ăn không chỉ ngon miệng mà còn mang ý nghĩa tượng trưng cho sự đủ đầy, sung túc.
+</p>
+<p>
+Những món ăn truyền thống như bánh chưng, bánh tét, giò chả, thịt đông, dưa hành
+đã trở thành hình ảnh quen thuộc không thể thiếu trong mâm cỗ ngày Tết.
+</p>
+<div class="images">
+  <img src="images\amthuc1.jpg" onclick="openImg(this.src)">
+  <img src="images\amthuc2.jpg" onclick="openImg(this.src)">
+  <img src="images\amthuc3.jpg" onclick="openImg(this.src)">
+</div>
+</div>
+
+<!-- Ý NGHĨA -->
+<div id="ynghia" class="section">
+<h2>Ý nghĩa của Tết Nguyên Đán</h2>
+<p>
+Tết Nguyên Đán mang ý nghĩa thiêng liêng về mặt tinh thần, đánh dấu sự khởi đầu mới,
+xóa bỏ những điều không may của năm cũ và đón chào hy vọng cho năm mới.
+</p>
+<p>
+Đây còn là dịp để gắn kết gia đình, thể hiện lòng hiếu thảo với ông bà tổ tiên
+và gìn giữ những giá trị văn hóa truyền thống của dân tộc Việt Nam qua nhiều thế hệ.
+</p>
+</div>
+
+<!-- OVERLAY -->
+<div id="overlay" onclick="closeImg()">
+  <img id="overlayImg">
+</div>
+
+<script>
+function showSection(id){
+  document.querySelectorAll('.section')
+    .forEach(sec => sec.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+
+function openImg(src){
+  document.getElementById('overlay').style.display='flex';
+  document.getElementById('overlayImg').src=src;
+}
+function closeImg(){
+  document.getElementById('overlay').style.display='none';
+}
+</script>
+
+</body>
+</html>
